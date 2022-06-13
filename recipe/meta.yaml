@@ -1,5 +1,5 @@
 {% set name = "wbgapi" %}
-{% set version = "1.0.7" %}
+{% set version = "1.0.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cd04c75830656ec4fb08b5061e06da9ac08b210e2f5add8217a173ef05223ba0
+  sha256: 0d75707b9b62aaf9cadecc66d539f68277318efefcdfecf112520dcaa65b967f
 
 build:
   noarch: python
@@ -37,7 +37,7 @@ test:
 
 about:
   home: https://github.com/tgherzog/wbgapi
-  summary: 'wbgapi provides a comprehensive interface to the World Banks data and metadata APIs'
+  summary: wbgapi provides a comprehensive interface to the World Banks data and metadata APIs
   description: |
     WBGAPI provides modern, pythonic access to the World Banks data API. 
     It is designed both for data novices and data scientist types.
