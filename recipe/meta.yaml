@@ -1,5 +1,5 @@
 {% set name = "wbgapi" %}
-{% set version = "1.0.10" %}
+{% set version = "1.0.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 93056f0a58820b4b78aff3f3c9ace52653562dac0c607f8d92a713be99a75554
+  sha256: 338c3c768bd120b80596b48fa0449ecabc93513ac989c55671dce579dbb3a5be
 
 build:
   noarch: python
