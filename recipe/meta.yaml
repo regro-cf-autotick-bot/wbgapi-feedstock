@@ -6,23 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 338c3c768bd120b80596b48fa0449ecabc93513ac989c55671dce579dbb3a5be
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.0
+    - python {{ python_min }}
     - pip
     - requests
     - PyYAML
     - tabulate
   run:
-    - python >=3.0
+    - python >={{ python_min }}
     - requests
     - PyYAML
     - tabulate
@@ -34,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/tgherzog/wbgapi
